@@ -1,0 +1,48 @@
+{
+  "name": "PatientMessage",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "patient_email": {
+      "type": "string"
+    },
+    "doctor_name": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "reply": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "string",
+      "enum": [
+        "patient_to_doctor",
+        "doctor_to_patient"
+      ],
+      "default": "patient_to_doctor"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "unread",
+        "read",
+        "replied"
+      ],
+      "default": "unread"
+    }
+  },
+  "required": [
+    "patient_name",
+    "message"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Prescription",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this prescription belongs to"
+    },
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "doctor_name": {
+      "type": "string"
+    },
+    "medication_name": {
+      "type": "string"
+    },
+    "dosage": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number"
+    },
+    "instructions": {
+      "type": "string"
+    },
+    "prescribed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "dispensed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "dispensed_by": {
+      "type": "string"
+    },
+    "total_cost": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "dispensed",
+        "partially_dispensed",
+        "cancelled"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "patient_name",
+    "medication_name"
+  ]
+}

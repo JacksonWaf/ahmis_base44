@@ -1,0 +1,57 @@
+{
+  "name": "VitalsRecord",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this record belongs to"
+    },
+    "admission_id": {
+      "type": "string"
+    },
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "recorded_by": {
+      "type": "string"
+    },
+    "recorded_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "recorded_time": {
+      "type": "string"
+    },
+    "temperature": {
+      "type": "string"
+    },
+    "blood_pressure": {
+      "type": "string"
+    },
+    "pulse_rate": {
+      "type": "string"
+    },
+    "respiratory_rate": {
+      "type": "string"
+    },
+    "oxygen_saturation": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "string"
+    },
+    "blood_glucose": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "patient_name",
+    "recorded_date"
+  ]
+}

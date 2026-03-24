@@ -1,0 +1,104 @@
+{
+  "name": "HealthWorker",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this staff belongs to"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string",
+      "description": "Login username for staff"
+    },
+    "password": {
+      "type": "string",
+      "description": "Staff login password"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "doctor",
+        "nurse",
+        "pharmacist",
+        "lab_technician",
+        "radiologist",
+        "surgeon",
+        "anesthesiologist",
+        "physiotherapist",
+        "admin",
+        "other"
+      ]
+    },
+    "specialization": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string",
+      "enum": [
+        "general",
+        "cardiology",
+        "neurology",
+        "orthopedics",
+        "pediatrics",
+        "dermatology",
+        "ophthalmology",
+        "ent",
+        "surgery",
+        "emergency",
+        "radiology",
+        "laboratory",
+        "pharmacy",
+        "admin"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "license_number": {
+      "type": "string"
+    },
+    "hire_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "shift": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "afternoon",
+        "night",
+        "rotating"
+      ]
+    },
+    "qualification": {
+      "type": "string"
+    },
+    "experience_years": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "on_leave",
+        "suspended",
+        "terminated"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "first_name",
+    "last_name",
+    "role"
+  ]
+}

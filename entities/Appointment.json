@@ -1,0 +1,66 @@
+{
+  "name": "Appointment",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this appointment belongs to"
+    },
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "doctor_id": {
+      "type": "string"
+    },
+    "doctor_name": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string",
+      "enum": [
+        "general",
+        "cardiology",
+        "neurology",
+        "orthopedics",
+        "pediatrics",
+        "dermatology",
+        "ophthalmology",
+        "ent",
+        "surgery",
+        "emergency"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "in_progress",
+        "completed",
+        "cancelled",
+        "no_show"
+      ],
+      "default": "scheduled"
+    }
+  },
+  "required": [
+    "patient_name",
+    "doctor_name",
+    "date"
+  ]
+}

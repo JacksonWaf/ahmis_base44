@@ -1,0 +1,72 @@
+{
+  "name": "ImagingOrder",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this order belongs to"
+    },
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "imaging_type": {
+      "type": "string",
+      "enum": [
+        "xray",
+        "ct_scan",
+        "mri",
+        "ultrasound",
+        "mammography",
+        "pet_scan",
+        "fluoroscopy",
+        "other"
+      ]
+    },
+    "body_part": {
+      "type": "string"
+    },
+    "ordered_by": {
+      "type": "string"
+    },
+    "order_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "routine",
+        "urgent",
+        "stat"
+      ],
+      "default": "routine"
+    },
+    "findings": {
+      "type": "string"
+    },
+    "report_url": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ordered",
+        "scheduled",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ],
+      "default": "ordered"
+    }
+  },
+  "required": [
+    "patient_name",
+    "imaging_type"
+  ]
+}

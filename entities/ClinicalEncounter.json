@@ -1,0 +1,118 @@
+{
+  "name": "ClinicalEncounter",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this encounter belongs to"
+    },
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "patient_age": {
+      "type": "string"
+    },
+    "patient_gender": {
+      "type": "string"
+    },
+    "clinician": {
+      "type": "string"
+    },
+    "encounter_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "encounter_time": {
+      "type": "string"
+    },
+    "chief_complaint": {
+      "type": "string"
+    },
+    "history_of_presenting_illness": {
+      "type": "string"
+    },
+    "vital_signs": {
+      "type": "object",
+      "properties": {
+        "temperature": {
+          "type": "string"
+        },
+        "blood_pressure": {
+          "type": "string"
+        },
+        "pulse_rate": {
+          "type": "string"
+        },
+        "respiratory_rate": {
+          "type": "string"
+        },
+        "oxygen_saturation": {
+          "type": "string"
+        },
+        "weight": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string"
+        }
+      }
+    },
+    "examination_findings": {
+      "type": "string"
+    },
+    "diagnosis": {
+      "type": "string"
+    },
+    "treatment_plan": {
+      "type": "string"
+    },
+    "lab_orders": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "imaging_orders": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prescription_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "admitted": {
+      "type": "boolean",
+      "default": false
+    },
+    "admission_ward": {
+      "type": "string"
+    },
+    "referral_department": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "in_progress",
+        "completed",
+        "referred",
+        "admitted"
+      ],
+      "default": "open"
+    }
+  },
+  "required": [
+    "patient_name"
+  ]
+}

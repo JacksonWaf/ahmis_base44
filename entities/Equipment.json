@@ -1,0 +1,85 @@
+{
+  "name": "Equipment",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this equipment belongs to"
+    },
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "diagnostic",
+        "therapeutic",
+        "surgical",
+        "monitoring",
+        "laboratory",
+        "imaging",
+        "life_support",
+        "other"
+      ]
+    },
+    "serial_number": {
+      "type": "string"
+    },
+    "manufacturer": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "purchase_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "warranty_expiry": {
+      "type": "string",
+      "format": "date"
+    },
+    "last_maintenance": {
+      "type": "string",
+      "format": "date"
+    },
+    "next_maintenance": {
+      "type": "string",
+      "format": "date"
+    },
+    "cost": {
+      "type": "number"
+    },
+    "condition": {
+      "type": "string",
+      "enum": [
+        "excellent",
+        "good",
+        "fair",
+        "poor",
+        "out_of_service"
+      ],
+      "default": "good"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "maintenance",
+        "decommissioned",
+        "repair"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "name",
+    "serial_number"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Facility",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Facility/hospital name"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "hospital",
+        "clinic",
+        "health_center",
+        "laboratory",
+        "pharmacy"
+      ],
+      "default": "hospital"
+    },
+    "address": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "license_number": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

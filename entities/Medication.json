@@ -1,0 +1,88 @@
+{
+  "name": "Medication",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this medication belongs to"
+    },
+    "name": {
+      "type": "string"
+    },
+    "generic_name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "antibiotic",
+        "analgesic",
+        "antihypertensive",
+        "antidiabetic",
+        "anticoagulant",
+        "antidepressant",
+        "antihistamine",
+        "steroid",
+        "vitamin",
+        "vaccine",
+        "other"
+      ]
+    },
+    "dosage_form": {
+      "type": "string",
+      "enum": [
+        "tablet",
+        "capsule",
+        "injection",
+        "syrup",
+        "cream",
+        "ointment",
+        "drops",
+        "inhaler",
+        "patch",
+        "other"
+      ]
+    },
+    "strength": {
+      "type": "string"
+    },
+    "manufacturer": {
+      "type": "string"
+    },
+    "unit_price": {
+      "type": "number"
+    },
+    "stock_quantity": {
+      "type": "number",
+      "default": 0
+    },
+    "reorder_level": {
+      "type": "number",
+      "default": 10
+    },
+    "expiry_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "batch_number": {
+      "type": "string"
+    },
+    "storage_conditions": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "low_stock",
+        "out_of_stock",
+        "expired",
+        "discontinued"
+      ],
+      "default": "available"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

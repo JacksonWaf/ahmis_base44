@@ -1,0 +1,72 @@
+{
+  "name": "InpatientAdmission",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this admission belongs to"
+    },
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "admitting_doctor": {
+      "type": "string"
+    },
+    "ward": {
+      "type": "string",
+      "enum": [
+        "general",
+        "medical",
+        "icu",
+        "pediatrics",
+        "maternity",
+        "surgical",
+        "emergency",
+        "cardiology",
+        "neurology",
+        "orthopedics"
+      ]
+    },
+    "bed_number": {
+      "type": "string"
+    },
+    "admission_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "admission_reason": {
+      "type": "string"
+    },
+    "diagnosis": {
+      "type": "string"
+    },
+    "discharge_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "discharge_summary": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "discharged",
+        "transferred",
+        "deceased"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "patient_name",
+    "ward",
+    "admission_date"
+  ]
+}

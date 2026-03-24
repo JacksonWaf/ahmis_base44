@@ -1,0 +1,28 @@
+{
+  "name": "SystemRole",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Role name (e.g. Doctor, Nurse, Receptionist)"
+    },
+    "description": {
+      "type": "string",
+      "description": "What this role is responsible for"
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of module access permissions"
+    },
+    "color": {
+      "type": "string",
+      "description": "Badge color for the role"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

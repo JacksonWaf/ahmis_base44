@@ -1,0 +1,85 @@
+{
+  "name": "LabTest",
+  "type": "object",
+  "properties": {
+    "facility_id": {
+      "type": "string",
+      "description": "Facility this test belongs to"
+    },
+    "patient_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "test_type": {
+      "type": "string",
+      "enum": [
+        "blood_count",
+        "urinalysis",
+        "lipid_panel",
+        "liver_function",
+        "kidney_function",
+        "thyroid",
+        "glucose",
+        "hba1c",
+        "electrolytes",
+        "coagulation",
+        "culture",
+        "other"
+      ]
+    },
+    "test_name": {
+      "type": "string"
+    },
+    "ordered_by": {
+      "type": "string"
+    },
+    "order_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "routine",
+        "urgent",
+        "stat"
+      ],
+      "default": "routine"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price of the lab test in GMD",
+      "default": 0
+    },
+    "results": {
+      "type": "string"
+    },
+    "result_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "normal_range": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ordered",
+        "sample_collected",
+        "processing",
+        "completed",
+        "cancelled"
+      ],
+      "default": "ordered"
+    }
+  },
+  "required": [
+    "patient_name",
+    "test_name"
+  ]
+}
